@@ -1,0 +1,103 @@
+
+<html xmlns = "http://www.w3.org/1999/xhtml">
+
+  <head> 
+    <title>Order Form</title> 
+    
+    <!-- JavaScript script -->
+    <script src="myScript.js">
+        </script>
+
+    <!-- CSS Styling -->
+    <link rel="stylesheet" href="style.css"></link>
+    
+  </head>
+
+  <body>
+    <div id="holder">
+    <p id="header">Order Form</p>
+
+    <div id="container">
+    <!--HTML Form-->
+	<form name="myForm" onsubmit="checkOrder();" action = "index.php" method = "post">
+        
+        
+        <!--User input for their name-->
+        <p id ="nametitle"> Name: 
+        <input id="nameinput" type = "text" name = "user" size = "20" maxlength = "20" /> 
+        </p>
+        
+        <br />
+        <table class="center" id="itemstable">
+            <!--Table headings-->
+            <tr id="headerrow"> 
+                <th id="itemsbox">Item</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Cost</th>
+            </tr>
+            <tr id="applerow">
+                <td> <img id="appleimg" src="apple.png" alt="Apple" height="42" width="42">Apple</td>
+                <td><input type="text" id ="appleqty" value="0" onblur="validateQtyInput();" onchange="computeApplePrice(); computeTotalPrice();"></td>
+                <td>$  0.69</td>
+                <td>$ <input type="text" id ="appleprice" value="0.00" onfocus = "this.blur();"></td>
+            </tr>
+            <tr id="orangerow">
+                <td><img src="orange.png" alt="Orange" height="42" width="42"> Orange</td>
+                <td><input type="text" id ="orangeqty" value="0" onblur="validateQtyInput()" onchange="computeOrangePrice(); computeTotalPrice();"></td>
+                <td>$  0.59</td>
+                <td>$ <input type="text" id ="orangeprice" value="0.00" onfocus = "this.blur();"></td>
+            </tr>
+            <tr id="bananarow">
+                <td><img src="banana.png" alt="Banana" height="42" width="50"> Banana</td>
+                <td><input type="text" id ="bananaqty" value="0" onblur="validateQtyInput()" onchange="computeBananaPrice(); computeTotalPrice();"></td>
+                <td>$  0.39</td>
+                <td>$ <input type="text" id ="bananaprice" value="0.00" onfocus = "this.blur();"></td>
+            </tr>
+            <tr id="totalrow">
+                <td></td>
+                <td></td>
+                <td>Total</td>
+                <td>$ <input type="text" id ="totalprice" value="0.00" onfocus = "this.blur();"></td>
+            </tr>
+        </table>
+
+        <br />
+
+        <!--Radio button selection for payment method-->
+        <div id="paymentsection">
+        <h2>Payment Method</h2>
+        <div id="radiobuttons">
+        <input type="radio" name="paymentmethod" id="Visa" value="visa"> Visa</br></br>
+        <input type="radio" name="paymentmethod" id="Mastercard" value="mastercard"> Mastercard</br></br>
+        <input type="radio" name="paymentmethod" id="Discover" value="discover"> Discover </br></br>
+        </div>
+        </div>
+        </br>
+
+        <input id="submitbutton" type="submit" value="Submit Order!">
+    
+    </form>
+    </div>
+    
+
+    <div id="footer">
+    <p id="bottombar"> CZ3006 Net Centric Computing Assignment 2 <br /> Done by Trifena Caroline | Lab Group TS6</p>
+    </div>
+
+</div>
+ </body>
+
+</html>
+    
+
+
+
+
+        
+
+       
+
+
+
+		
